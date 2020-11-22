@@ -5,12 +5,16 @@ export default class AgreementScreen extends React.Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            name: props.route.params.name,
+        }
     }
 
     render() {
         return (
             <View style={styles.container}>
-                <Text>Agreement Screen</Text>
+                <Text>{this.state.name}</Text>
             </View>
         )
     }
