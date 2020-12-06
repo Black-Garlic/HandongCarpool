@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default class AgreementScreen extends React.Component {
 
@@ -15,6 +15,11 @@ export default class AgreementScreen extends React.Component {
         return (
             <View style={styles.container}>
                 <Text>{this.state.name}</Text>
+                <TouchableOpacity
+                    onPress={() => this.props.navigation.navigate('BottomTab', {screen: 'Home'})}
+                >
+                    <Text>Go to BottomTab</Text>
+                </TouchableOpacity>
             </View>
         )
     }
